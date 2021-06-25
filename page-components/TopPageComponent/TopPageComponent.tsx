@@ -24,7 +24,7 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
 				<Advantages advantages={page.advantages} />
 			</>
 			}
-			{page.seoText && <p>{page.seoText}</p>}
+			{page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />}
 			<Htag tag='h2'>Получаемые навыки</Htag>
 			{page.tags.map(t => <Tag key={t} color='primary'>{t}</Tag>)}
 		</div>
