@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Htag, P, Tag, Rating, Input } from '../components';
+import { Button, Htag, P, Tag, Rating, Input, Textarea } from '../components';
 import { withLayout } from '../layout/Layout';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
@@ -23,6 +23,7 @@ function Home({ menu }: HomeProps): JSX.Element {
 			<Tag color='primary'>Primary</Tag>
 			<Rating rating={rating} isEditable setRating={setRating} />
 			<Input placeholder='test' />
+			<Textarea placeholder='Текст отзыва' />
 		</>
 	);
 }
